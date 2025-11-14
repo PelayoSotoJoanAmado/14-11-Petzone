@@ -1,0 +1,362 @@
+/* PAGINA 404 - ERROR  */
+.error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.error404::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.error404__contenedor {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+/* HUELLAS ANIMADAS */
+.error404__huellas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.huella {
+    display: inline-block;
+    opacity: 0;
+    animation: aparecerHuella 2s ease-in-out infinite;
+}
+
+.huella:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.huella:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* CONTENIDO DE ERROR */
+.error404__codigo {
+    font-size: 8rem;
+    font-weight: 900;
+    color: #23906F;
+    margin: 1rem 0;
+    line-height: 1;
+    text-shadow: 3px 3px 0 rgba(76, 175, 80, 0.2);
+    animation: rebotar 2s ease-in-out infinite;
+}
+
+.error404__titulo {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.error404__mensaje {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+/* BOTONES */
+.error404__acciones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.error404__boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error404__boton .material-icons {
+    font-size: 1.3rem;
+}
+
+.error404__boton--primario {
+    background-color: #23906F;
+    color: white;
+}
+
+.error404__boton--primario:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.error404__boton--secundario {
+    background-color: white;
+    color: #23906F;
+    border: 2px solid #23906F;
+}
+
+.error404__boton--secundario:hover {
+    background-color: #23906F;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.2);
+}
+
+/* SUGERENCIAS */
+.error404__sugerencias {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sugerencias__titulo {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.sugerencias__enlaces {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sugerencia__enlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: #666;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.sugerencia__enlace:hover {
+    color: #23906F;
+    background-color: #f1f8f4;
+    transform: translateY(-3px);
+}
+
+.sugerencia__enlace .material-icons {
+    font-size: 2rem;
+    color: #23906F;
+}
+
+/*  ANIMACIONES  */
+@keyframes rebotar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes aparecerHuella {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .error404 {
+        padding: 3.5rem 2rem;
+    }
+
+    .error404__contenedor {
+        max-width: 650px;
+    }
+
+    .error404__codigo {
+        font-size: 7rem;
+    }
+
+    .error404__titulo {
+        font-size: 2rem;
+    }
+
+    .error404__mensaje {
+        font-size: 1.05rem;
+    }
+
+    .error404__huellas {
+        font-size: 2.2rem;
+        gap: 1.5rem;
+    }
+
+    .error404__boton {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .sugerencias__enlaces {
+        gap: 1.2rem;
+    }
+
+    .sugerencia__enlace .material-icons {
+        font-size: 1.8rem;
+    }
+}
+
+/* Móviles grandes y tablets pequeñas (481px - 768px) */
+@media (max-width: 768px) {
+    .error404 {
+        padding: 3rem 1.5rem;
+        min-height: 60vh;
+    }
+
+    .error404__contenedor {
+        max-width: 100%;
+    }
+
+    .error404__codigo {
+        font-size: 5.5rem;
+        margin: 0.8rem 0;
+    }
+
+    .error404__titulo {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .error404__mensaje {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .error404__huellas {
+        font-size: 2rem;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .error404__acciones {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .error404__boton {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .error404__sugerencias {
+        padding: 1.5rem;
+    }
+
+    .sugerencias__titulo {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .sugerencias__enlaces {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .sugerencia__enlace {
+        flex: 1;
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .sugerencia__enlace .material-icons {
+        font-size: 1.6rem;
+    }
+}
+
+/* Móviles pequeños  (480px) */
+@media (max-width: 480px) {
+    .error404 {
+        padding: 2.5rem 1rem;
+    }
+
+    .error404__codigo {
+        font-size: 4.5rem;
+    }
+
+    .error404__titulo {
+        font-size: 1.5rem;
+    }
+
+    .error404__mensaje {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+
+    .error404__huellas {
+        font-size: 1.8rem;
+        gap: 1rem;
+    }
+
+    .error404__boton {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .error404__boton .material-icons {
+        font-size: 1.2rem;
+    }
+
+    .error404__sugerencias {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .sugerencias__titulo {
+        font-size: 0.95rem;
+    }
+
+    .sugerencias__enlaces {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .sugerencia__enlace {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .sugerencia__enlace .material-icons {
+        font-size: 1.5rem;
+    }
+}

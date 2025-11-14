@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva - PetZone</title>
+
+    <script src="../JS/carrito.js"defer></script>
+    <link rel="stylesheet" href="../CSS/carrito.css">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style-reserva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER - NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="../index.html">
+                    <img src="../IMG/Logo.png" alt="Logo PetZone" class="navbar__logo-img">
+                </a>
+                <a href="../index.html" class="navbar__logo-text">
+                    PetZone
+                </a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="nosotros.html" class="navbar__link">NOSOTROS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="productos.html" class="navbar__link">PRODUCTOS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="servicios.html" class="navbar__link">SERVICIOS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="reserva.html" class="navbar__link">RESERVA</a>
+                </li>
+            </ul>
+
+            <button class="navbar__btn" onclick="toggleCarrito()">
+                <span class="material-icons">shopping_cart</span>
+                CARRITO
+                <span id="cartCount" class="cart-count" style="display: none;">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <!-- SECCIÓN FORMULARIO DE RESERVA -->
+        <section class="reserva">
+            <div class="reserva__contenedor">
+                <div class="reserva__izquierda">
+                    <h1 class="reserva__titulo">AGENDA TU</h1>
+                    <h2 class="reserva__titulo">CITA EN</h2>
+                    <h2 class="reserva__titulo--destacado">SEGUNDOS</h2>
+
+                    <div class="reserva__ilustracion">
+                        <img src="../IMG/Reserva/Reserva_header.png" alt="Veterinaria con mascota"
+                            class="reserva__imagen">
+                    </div>
+                </div>
+
+                <div class="reserva__derecha">
+                    <div class="formulario__tarjeta">
+                        <h3 class="formulario__encabezado">
+                            DALE A TU MASCOTA EL CUIDADO EXTRAORDINARIO QUE TANTO AMAS BRINDARLE
+                        </h3>
+
+                        <form class="formulario" id="formularioReserva">
+                            <div class="formulario__grupo">
+                                <input type="text" id="nombre" name="nombre" class="formulario__input"
+                                    placeholder="Nombre" required>
+                            </div>
+
+                            <div class="formulario__grupo">
+                                <input type="email" id="correo" name="correo" class="formulario__input"
+                                    placeholder="Correo electrónico" required>
+                            </div>
+
+                            <div class="formulario__grupo">
+                                <input type="tel" id="telefono" name="telefono" class="formulario__input"
+                                    placeholder="Número de celular" required>
+                            </div>
+
+                            <div class="formulario__grupo">
+                                <select id="servicio" name="servicio" aria-label="Selecciona un servicio"
+                                    class="formulario__select" required>
+                                    <option value="" disabled selected>Servicio</option>
+                                    <option value="consulta-veterinaria">Consulta Veterinaria</option>
+                                    <option value="peluqueria">Peluquería y Estética</option>
+                                    <option value="vacunacion">Vacunación</option>
+                                    <option value="desparasitacion">Desparasitación</option>
+                                    <option value="bano">Baño y Aseo</option>
+                                    <option value="guarderia">Guardería</option>
+                                </select>
+                            </div>
+
+                            <div class="formulario__grupo">
+                                <textarea id="mensaje" name="mensaje" class="formulario__textarea" placeholder="Mensaje"
+                                    rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="formulario__boton">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INFORMACIÓN DE CONTACTO -->
+        <section class="contacto">
+            <div class="contacto__contenedor1">
+                <h2 class="contacto__titulo">ENCUÉNTRANOS</h2>
+                <h3 class="contacto__titulo">FÁCILMENTE</h3>
+
+                <div class="contacto__grid">
+                    <div class="contacto__tarjeta">
+                        <div class="contacto__icono-contenedor-master">
+                            <div class="contacto__icono-contenedor">
+                                <span class="material-icons contacto__icono">phone</span>
+                            </div>
+                        </div>
+                        <div class="contacto__texto">
+                            <h4 class="contacto__subtitulo">Número de teléfono</h4>
+                            <p class="contacto__dato">935 873 268</p>
+                        </div>
+                    </div>
+
+                    <div class="contacto__tarjeta">
+                        <div class="contacto__icono-contenedor-master">
+                            <div class="contacto__icono-contenedor">
+                                <span class="material-icons contacto__icono">email</span>
+                            </div>
+                        </div>
+                        <div class="contacto__texto">
+                            <h4 class="contacto__subtitulo">Correo Electrónico</h4>
+                            <p class="contacto__dato">PetZone@login@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contacto__tarjeta">
+                        <div class="contacto__icono-contenedor-master">
+                            <div class="contacto__icono-contenedor">
+                                <span class="material-icons contacto__icono">location_on</span>
+                            </div>
+                        </div>
+                        <div class="contacto__texto">
+                            <h4 class="contacto__subtitulo">Dirección</h4>
+                            <p class="contacto__dato">Panamericana Norte, Av. Alfredo Mendiola 6377, Los Olivos 15306
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contacto__tarjeta">
+                        <div class="contacto__icono-contenedor-master">
+                            <div class="contacto__icono-contenedor">
+                                <span class="material-icons contacto__icono">schedule</span>
+                            </div>
+                        </div>
+                        <div class="contacto__texto">
+                            <h4 class="contacto__subtitulo">Horarios de Atención</h4>
+                            <div class="contacto__horarios">
+                                <p class="contacto__horario"><strong>LUNES a VIERNES:</strong> 8:00 AM - 7:00 PM</p>
+                                <p class="contacto__horario"><strong>SÁBADOS:</strong> 8:00 AM - 5:00 PM</p>
+                                <p class="contacto__horario"><strong>DOMINGOS:</strong> 9:00 AM - 2:00 PM (Solo
+                                    consultas veterinarias - No servicios de spa)</p>
+                                <p class="contacto__horario"><strong>EMERGENCIAS:</strong> 24/7 - Llamar antes de llegar
+                                    (Recargo por atención nocturna y feriados)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contacto__contenedor2">
+                <img class="img__contacto" src="../IMG/Reserva/Vet Encuentranos Facilmente.png"
+                    alt="Imagen de contacto veterinaria">
+            </div>
+        </section>
+
+        <!-- SECCIÓN POR QUÉ ELEGIRNOS -->
+        <section class="elegirnos">
+            <div class="elegirnos__contenedor">
+                <h2 class="elegirnos__titulo">¿POR QUÉ</h2>
+                <h3 class="elegirnos__titulo--destacado">ELEGIRNOS?</h3>
+
+                <div class="elegirnos__grid">
+                    <div class="elegirnos__tarjeta">
+                        <p class="elegirnos__texto">
+                            <strong>Atención sin prisa:</strong> Dedicamos el tiempo necesario a cada mascota
+                        </p>
+                    </div>
+
+                    <div class="elegirnos__tarjeta">
+                        <p class="elegirnos__texto">
+                            <strong>Ambiente libre de estrés:</strong> Instalaciones diseñadas para la comodidad
+                        </p>
+                    </div>
+
+                    <div class="elegirnos__tarjeta elegirnos__tarjeta--centrado">
+                        <p class="elegirnos__texto">
+                            <strong>Seguimiento personalizado:</strong> Te contactamos para saber cómo está tu mascota
+                        </p>
+                    </div>
+
+                    <div class="elegirnos__tarjeta">
+                        <p class="elegirnos__texto">
+                            <strong>Compromiso real:</strong> Si no quedas satisfecho, trabajamos hasta que tu mascota
+                            reciba exactamente lo que necesita
+                        </p>
+                    </div>
+
+                    <div class="elegirnos__tarjeta">
+                        <p class="elegirnos__texto">
+                            <strong>Profesionales especializados:</strong> Veterinarios con años de experiencia
+                        </p>
+                    </div>
+                </div>
+
+                <div class="elegirnos__imagen-contenedor">
+                    <img src="../IMG/Reserva/r_razon_elegirnos.png" class="elegirnos__imagen">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="../IMG/Logo.png" alt="PetZone Logo" class="footer__logo-img">
+                <span class="footer__logo-text">PetZone</span>
+            </div>
+
+            <nav class="footer__nav">
+                <ul class="footer__menu">
+                    <li class="footer__copyright">PetZone © 2025. Todos los derechos reservados.</li>
+                </ul>
+            </nav>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>
