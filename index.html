@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetZone - Cuidado y Bienestar para tu Mascota</title>
+
+    <script src="JS/slider-anuncio.js" defer></script>
+    <script src="JS/carrito.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/carrito.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- HEADER - NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="index.html">
+                    <img src="IMG/Logo.png" alt="Logo PetZone" class="navbar__logo-img">
+                </a>
+                <a href="index.html" class="navbar__logo-text">
+                    PetZone
+                </a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="HTML/nosotros.html" class="navbar__link">NOSOTROS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="HTML/productos.html" class="navbar__link">PRODUCTOS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="HTML/servicios.html" class="navbar__link">SERVICIOS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="HTML/reserva.html" class="navbar__link">RESERVA</a>
+                </li>
+            </ul>
+
+            <button class="navbar__btn" onclick="toggleCarrito()">
+                <span class="material-icons">shopping_cart</span>
+                CARRITO
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <div id="topSlider" class="top-slider"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <!-- SECCIÓN HERO -->
+        <section class="hero">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">CUIDA A TU MASCOTA</h1>
+                    <h2 class="hero__subtitle">CON ESTILO Y CARIÑO</h2>
+                    <p class="hero__description">
+                        Servicio integral de cuidado y bienestar para tu mascota, diseñado para brindar salud,
+                        comodidad y atención de calidad a tu compañero peludo
+                    </p>
+                </div>
+                <div class="hero__image">
+                    <img src="IMG/mascota_inicio.jpg" alt="Mascota feliz" class="hero__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRODUCTOS -->
+        <section class="productos">
+            <div class="productos__container">
+                <h2 class="productos__title">PRODUCTOS</h2>
+
+                <div class="productos__grid">
+                    <!-- Producto 1 -->
+                    <article class="producto">
+                        <img src="IMG/IconoAlimento.png" alt="Icono de Alimentación" class="producto__icon">
+                        <h3 class="producto__name">Alimentación</h3>
+                        <p class="producto__description">
+                            Alimentos balanceados, dietas premium y snacks saludables para perros y gatos en todas sus
+                            etapas de vida. Nuestra selección está pensada en el bienestar de cada calidad, energía y
+                            bienestar diario de tu mascota.
+                        </p>
+                        <span class="producto__badge">Productos Destacados</span>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="producto">
+                        <img src="IMG/IconoSalud.png" alt="Icono de Salud y Cuidado" class="producto__icon">
+                        <h3 class="producto__name">Salud y Cuidado</h3>
+                        <p class="producto__description">
+                            Desde antipulgas y desparasitantes hasta vitaminas, suplementos y productos de higiene.
+                            Nuestra selección está pensada para proteger la salud de tu mascota y extender su tiempo de
+                            vida.
+                        </p>
+                        <span class="producto__badge">Calidad Asegurada</span>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="producto">
+                        <img src="IMG/IconoJuguete.png" alt="Icono de Accesorios y entretenimiento"
+                            class="producto__icon">
+                        <h3 class="producto__name">Accesorios y entretenimiento</h3>
+                        <p class="producto__description">
+                            Juguetes interactivos, camas cómodas, collares, correas y más. Todo lo necesario para que tu
+                            mascota se divierta, se mantenga activa y brinde momentos especiales en el hogar.
+                        </p>
+                        <span class="producto__badge">Diversión Garantizada</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TESTIMONIOS -->
+        <section class="testimonios">
+            <div class="testimonios__container">
+                <div class="testimonios__image">
+                    <img src="IMG/reseña1.png" alt="Cliente satisfecho con su mascota" class="testimonios__img">
+                </div>
+
+                <div class="testimonios__content">
+                    <div class="testimonios__badge">
+                        <span class="material-icons testimonios__icon">hotel_class</span>
+                        <h3 class="testimonios__label">Testimonio destacado</h3>
+                    </div>
+
+                    <p class="testimonios__text">
+                        "Desde que descubrimos PetZone, Luna disfruta de cada visita. El personal es amable, atento y
+                        realmente se preocupa por su bienestar. Los servicios de cuidado y los consejos que nos dan han
+                        hecho una gran diferencia en su salud y felicidad. ¡Definitivamente es nuestro lugar de
+                        confianza!"
+                    </p>
+
+                    <div class="testimonios__rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+
+                    <p class="testimonios__author">Naila Poter</p>
+                    <p class="testimonios__role">Dueña de Luna</p>
+                </div>
+            </div>
+        </section>
+        <!--Video Section-->
+        <section class="video__section">
+
+            <div class="videotext__contenedor">
+                <div class="video__text">
+                    <h2 class="video__title">VE EL AMOR</h2>
+                    <h3 class="video__subtitle">EN ACCIÓN </h3>
+                    <p class="video__description">
+                        ¡Mira a nuestros peluqueros trabajar su magia! Desde un cepillado suave hasta cortes precisos,
+                        cada momento está lleno de cuidado y profesionalismo. La felicidad de tu mascota es nuestra
+                        prioridad.
+                    </p>
+                    <video class="video" src="MP4/Corte2.mp4" autoplay loop></video>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="IMG/Logo.png" alt="PetZone Logo" class="footer__logo-img">
+                <span class="footer__logo-text">PetZone</span>
+            </div>
+
+            <nav class="footer__nav">
+                <ul class="footer__menu">
+                    <li class="footer__copyright">PetZone © 2025. Todos los derechos reservados.</li>
+                </ul>
+            </nav>
+        </div>
+
+    </footer>
+    <div id="bottomAnnouncement" class="bottom-announcement"></div>
+
+</body>
+
+
+</html>
