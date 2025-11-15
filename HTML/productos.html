@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - PetZone</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style-productos.css">
+    <link rel="stylesheet" href="../CSS/carrito.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER - NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="../index.html">
+                    <img src="../IMG/Logo.png" alt="Logo PetZone" class="navbar__logo-img">
+                </a>
+                <a href="../index.html" class="navbar__logo-text">
+                    PetZone
+                </a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="nosotros.html" class="navbar__link">NOSOTROS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="productos.html" class="navbar__link">PRODUCTOS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="servicios.html" class="navbar__link">SERVICIOS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="reserva.html" class="navbar__link">RESERVA</a>
+                </li>
+            </ul>
+
+            <button class="navbar__btn" onclick="toggleCarrito()">
+                <span class="material-icons">shopping_cart</span>
+                CARRITO
+                <span id="cartCount" class="cart-count" style="display: none;">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <!-- SECCIÓN HERO PRODUCTOS -->
+        <section class="products-hero">
+            <div class="products-hero__container">
+                <h1 class="products-hero__title shrikhand-regular">PRODUCTOS</h1>
+                <div>
+                    <img src="../IMG/Productos/productos-header.png" alt="Mascotas felices" class="products-hero__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FILTROS -->
+        <section class="filters">
+            <div class="filters__container">
+                <button class="filters__btn filters__btn--active" data-filter="todos">Todos</button>
+                <button class="filters__btn" data-filter="comida">Comida</button>
+                <button class="filters__btn" data-filter="juguetes">Juguetes</button>
+                <button class="filters__btn" data-filter="aseo">Aseo</button>
+                <button class="filters__btn" data-filter="antipulgas">Antipulgas</button>
+                <button class="filters__btn" data-filter="accesorios">Accesorios</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CATÁLOGO DE PRODUCTOS -->
+        <section class="catalog">
+            <div class="catalog__container">
+                <!-- Grid donde se cargarán los productos dinámicamente -->
+                <div class="catalog__grid" id="productGrid">
+                    <!-- Los productos se cargarán aquí desde la base de datos -->
+                </div>
+
+                <!-- Botón Mostrar Más -->
+                <div class="catalog__more">
+                    <button class="catalog__more-btn" id="showMoreBtn">
+                        <span class="catalog__more-icon">
+                            <span class="material-icons">expand_more expand_more expand_more</span>
+                        </span>
+                        <span class="catalog__more-text">Mostrar más</span>
+                        <span class="catalog__more-icon">
+                            <span class="material-icons">expand_more expand_more expand_more</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="../IMG/Logo.png" alt="PetZone Logo" class="footer__logo-img">
+                <span class="footer__logo-text">PetZone</span>
+            </div>
+
+            <nav class="footer__nav">
+                <ul class="footer__menu">
+                    <li class="footer__copyright">PetZone © 2025. Todos los derechos reservados.</li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Scripts - ORDEN IMPORTANTE -->
+    <script src="../JS/carrito.js"></script>
+    <script src="../JS/productos-dinamico.js"></script>
+</body>
+
+</html>
